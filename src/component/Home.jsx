@@ -1,15 +1,23 @@
-import React, { Component } from 'react'
 
-class Home extends Component {
+import React, { createContext } from 'react'
+import AddEmployee from './AddEmployee'
+import Employees from './Employees'
 
-    constructor(props) {
-        super(props);
-    }
+export const EmployeeContxt = createContext()
+
+
+
+export default  function Home() {
+    const totalEmployees = ["hello"]
+  return (
+     
+    <EmployeeContxt.Provider value ={totalEmployees}>
+    
+    <AddEmployee/>
+   <Employees/> 
+
+    </EmployeeContxt.Provider>
   
-    render() {
-        return ( <h2 className="text-center">Home</h2>);
-    }
-
+  )
 }
 
-export default Home;
