@@ -2,19 +2,18 @@
 import React, { createContext } from 'react'
 import AddEmployee from './AddEmployee'
 import Employees from './Employees'
+const totalEmployees = ["hello"]
+export const EmployeeContxt = createContext(totalEmployees)
 
-export const EmployeeContxt = createContext()
 
 
-
-export default  function Home() {
-    const totalEmployees = ["hello"]
+export default  function Home(props) {
+ 
   return (
      
     <EmployeeContxt.Provider value ={totalEmployees}>
     
-    <AddEmployee/>
-   <Employees/> 
+  {props.children}
 
     </EmployeeContxt.Provider>
   

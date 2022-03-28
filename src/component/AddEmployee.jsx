@@ -12,11 +12,11 @@ const initialState = {
     experience:""
 }
 
-export default function AddEmployee() {
+export default function AddEmployee(props) {
 const [formState,dispatch] = useReducer(formReducer, initialState)
-   
-const totalEmployees = useContext(EmployeeContxt)
-// console.log(totalEmployees)
+//    console.log(props,"props")
+const Employees = useContext(EmployeeContxt)
+console.log(Employees,"asads")
 
     function handleChange(e){
 
@@ -35,7 +35,7 @@ const totalEmployees = useContext(EmployeeContxt)
 
     const addnewEmployee =(e)=>{
         e.preventDefault()
-        // totalEmployees.push(formState)
+       Employees.push(...formState)
       
     }
 

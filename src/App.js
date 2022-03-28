@@ -16,8 +16,10 @@ function App() {
 
                <Link to = '/add'>  <button> Add Employee</button></Link>
                   <Switch>
+                      <Router>
                       <Route path="/" exact component={Home} />
                       <Route path="/add" component={AddEmployee} />
+                      </Router>
                  
                   </Switch>
               </div>
